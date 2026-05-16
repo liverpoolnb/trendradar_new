@@ -117,6 +117,14 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
+    - id: "reuters"
+      name: "路透社"
+      url: "https://news.google.com/rss/search?q=site:reuters.com+when:24h&hl=en-US&gl=US&ceid=US:en"
+
+    - id: "bloomberg"
+      name: "彭博社"
+      url: "https://news.google.com/rss/search?q=site:bloomberg.com+when:24h&hl=en-US&gl=US&ceid=US:en"
+
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -169,7 +177,7 @@ report:
 # 5) 这里决定“筛选路径”，不决定 AI 模型（模型在 ai 段）
 # ===============================================================
 filter:
-  method: "keyword"                     # 可选: keyword | ai
+  method: "ai"                     # 可选: keyword | ai
 
   # AI 模式标签排序开关（仅 ai 模式生效）
   # true: 按标签优先级排序（来自兴趣描述提取顺序）
@@ -459,7 +467,7 @@ ai:
 # 模型配置见上方 ai 配置段
 # ===============================================================
 ai_analysis:
-  enabled: true                     # 是否启用 AI 分析（总开关）
+  enabled: false                     # 是否启用 AI 分析（总开关）
                                     # ⚠️ 开启调度系统后，此项仍为总开关：
                                     #   false → 永远不分析（无论调度怎么设置）
                                     #   true  → 由调度的 analyze 字段控制何时分析
